@@ -1,0 +1,43 @@
+#nav-box{
+    box-shadow: 4px 7px 20px  skyblue;
+}
+
+.big-cont{
+    border: .5px solid skyblue;
+    box-shadow: 4px 7px 20px  skyblue;
+}
+
+.shadow{
+    text-shadow: 4px 7px 10px  skyblue;
+}
+
+input{
+    height: 80px;
+    width: 80px;
+    box-shadow: 4px 7px 20px  skyblue;
+    background-color: #0b0423;
+    text-shadow: 4px 7px 10px  skyblue;
+    cursor: grab;
+}
+
+.Ini{
+    height:60px;
+    
+    box-shadow: 4px 7px 20px  skyblue;
+    background-color: #0b0423;
+    text-shadow: 4px 7px 10px  rebeccapurple;
+}
+
+
+
+label{
+    text-shadow: 4px 7px 10px  skyblue;
+}
+
+.label{
+    text-shadow: 4px 7px 10px  skyblue;
+}
+
+.car{
+    box-shadow: 4px 4px 100px  rebeccapurple
+}

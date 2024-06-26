@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <link rel="icon" sizes="32x32" href="{{ url_for('static', filename='img/8-Number-PNG.png') }}">
+    <title>ePuzzle</title>
+</head>
+<body class="bg-dark">
+
+    <!--nav-->
+
+    <nav class="navbar navbar-light bg-dark" id="nav-box">
+        <span class="navbar-brand mb-0 text-info">
+            <img width="45px" src="{{ url_for('static', filename='img/8-Number-PNG.png') }}"/> 
+            <span class="h3">Puzzle</span>
+        </span>
+    </nav>
+    <div class="d-flex row p-5" style="margin-top: 80px;">
+
+        <div class="card bg-dark car col-4 mt-4" style="width: 18rem;">
+            <img class="card-img-top" height="300px" src="{{ url_for('static', filename='img/alian.png') }}" alt="Card image cap">
+            <div class="card-body text-light">
+                <h4 class="label">lets show the solution</h4>
+
+                <div class="text-center m-3">
+                    <button id="tog" class="btn btn-outline-light">show</button>
+                </div>
+            </div>
+        </div>
+
+        {%for item in items%}
+        <div class="card bg-dark car row tog col-4 mt-4" style="width: 18rem;">
+            <div class="card-body text-light ">
+                <div class="row m-2 ">
+                    {%for it in item%}
+                        {%for i in it%}
+                        <div class=" col-3 m-1 item p-2 text-center text-light h2 Ini ">{{i}}</div>
+                        {%endfor%}
+                    {%endfor%}
+                </div>
+                <div class="label text-center h3" style="margin-top: 100px;">
+                    {{moves[loop.index0]}}
+                </div>
+                <div class="text-center">
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+
+    </div>
+
+</body>
+<script src="{{ url_for('static', filename='js/all.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/code.jquery.com_jquery-3.7.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/homeCust.js') }}"></script>
+<script>
+    $(".tog").toggle()
+    $(".Ini").toggle()
+
+    function gogo (){
+
+        $(".Ini").toggle(100)
+
+        $(".tog").toggle(800)
+
+    }
+
+    document.getElementById("tog").addEventListener("click",()=> gogo())
+</script>
+</html>
